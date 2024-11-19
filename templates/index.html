@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      #navbar {
+        width: 100%;
+        background-color: lightblue;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-family: sans-serif;
+        align-items: center;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        align-items: center;
+      }
+      .container {
+        width: 70%;
+        margin: auto;
+        height: 100%;
+      }
+      .name-input {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+        background-color: #f3f4f6;
+        border: 2px solid #d1d5db;
+      }
+      .age-selector {
+        padding: 10px;
+        background-color: #f3f4f6;
+        border: 2px solid #d1d5db;
+        border-radius: 5px;
+      }
+      .btn-submit {
+        padding: 1px;
+        background-color: ;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-container {
+        width: max-content;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .heading {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+      .form-container form {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-column: 2 / 3;
+        gap: 20px;
+      }
+      .gender-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .btn-submit {
+        padding: 10px 20px;
+        background-color: #295fe6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .inner-gender-container {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <nav id="navbar">
+        <div class="logo">Health Care Dashboard</div>
+
+        <ul class="nav-links">
+          <li>Home</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="form-container">
+          <h1 class="heading">Registration Page</h1>
+          <form onsubmit="return false">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              class="name-input input"
+            />
+
+            <select id="age_select" class="age-selector">
+              <option value="">Age</option>
+              <script>
+                const select = document.querySelector("#age_select");
+                console.log(select);
+                for (let i = 0; i <= 100; i++) {
+                  select.innerHTML += `<option value="${i}">${i}</option>`;
+                }
+              </script>
+              <script></script>
+            </select>
+            <div class="gender-container">
+              <label>Gender</label>
+              <div class="inner-gender-container">
+                <div class="male-container">
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value=""
+                    class=""
+                  />
+                  <label htmlFor="male" class>Male</label>
+                </div>
+
+                <div class="female-container">
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value=""
+                    className=""
+                  />
+                  <label htmlFor="female" class>Female</label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
